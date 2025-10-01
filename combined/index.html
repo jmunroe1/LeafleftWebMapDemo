@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Weather & Earthquake Map</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="combined.css">
+</head>
+<body>
+    <div id="header">
+        <h1>Weather Alerts & Earthquake Data Map</h1>
+        <p>Interactive map showing real-time weather alerts and earthquake data</p>
+    </div>
+    
+    <div id="layer-controls">
+        <h3>Data Layers</h3>
+        <div class="control-group">
+            <label>
+                <input type="checkbox" id="weather-toggle" checked>
+                <span class="control-label weather-label">Weather Alerts</span>
+            </label>
+            <label>
+                <input type="checkbox" id="earthquake-toggle" checked>
+                <span class="control-label earthquake-label">Earthquakes</span>
+            </label>
+            <label>
+                <input type="checkbox" id="radar-toggle" checked>
+                <span class="control-label radar-label">Precipitation Radar</span>
+            </label>
+        </div>
+    </div>
+    
+    <div id="combinedmap"></div>
+    
+    <div id="weather-legend" class="legend">
+        <h3>Weather Alert Severity</h3>
+        <div class="legend-item">
+            <span class="legend-circle" style="background-color: #ffff00;"></span>
+            <span>Minor</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-circle" style="background-color: #ffa500;"></span>
+            <span>Moderate</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-circle" style="background-color: #ff0000;"></span>
+            <span>Severe</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-circle" style="background-color: #8b0000;"></span>
+            <span>Extreme</span>
+        </div>
+    </div>
+    
+    <div id="earthquake-legend" class="legend">
+        <h3>Earthquake Magnitude</h3>
+        <div class="legend-item">
+            <span class="legend-circle" style="background-color: #00ff00;"></span>
+            <span>0.0 - 2.9 (Minor)</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-circle" style="background-color: #ffff00;"></span>
+            <span>3.0 - 3.9 (Light)</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-circle" style="background-color: #ffa500;"></span>
+            <span>4.0 - 4.9 (Moderate)</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-circle" style="background-color: #ff6600;"></span>
+            <span>5.0 - 5.9 (Strong)</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-circle" style="background-color: #ff0000;"></span>
+            <span>6.0 - 6.9 (Major)</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-circle" style="background-color: #8b0000;"></span>
+            <span>7.0+ (Great)</span>
+        </div>
+    </div>
+    
+    <div id="status">
+        <span id="weather-status">Loading weather alerts...</span>
+        <span id="earthquake-status">Loading earthquake data...</span>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script src="combined.js"></script>
+</body>
+</html>

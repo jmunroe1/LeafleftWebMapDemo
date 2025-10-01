@@ -1,6 +1,9 @@
 var map = L.map('weathermap').setView([38, -95], 4);
-var basemapUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-var basemap =  L.tileLayer(basemapUrl, {attribution: '&copy; <a href="http://' + 'www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
+var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
+var basemap = OpenStreetMap_Mapnik.addTo(map);
 
 
 //add the national precipitation radar layer

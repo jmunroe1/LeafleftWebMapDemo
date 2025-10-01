@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Map - Real-time Earthquake Data</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="earthquake.css">
+</head>
+<body>
+    <div id="header">
+        <h1>Real-time Earthquake Map</h1>
+        <p>Displaying earthquakes from the past 24 hours worldwide</p>
+    </div>
+    
+    <div id="earthquakemap"></div>
+    
+    <div id="legend">
+        <h3>Earthquake Magnitude</h3>
+        <div class="legend-item">
+            <span class="legend-circle" style="background-color: #00ff08;"></span>
+            <span>0.0 - 2.9 (Minor)</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-circle" style="background-color: #f9f500;"></span>
+            <span>3.0 - 3.9 (Light)</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-circle" style="background-color: #ffa200;"></span>
+            <span>4.0 - 4.9 (Moderate)</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-circle" style="background-color: #ff6600;"></span>
+            <span>5.0 - 5.9 (Strong)</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-circle" style="background-color: #ff0000;"></span>
+            <span>6.0 - 6.9 (Major)</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-circle" style="background-color: #8b0000;"></span>
+            <span>7.0+ (Great)</span>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script src="earthquake.js"></script>
+</body>
+</html>
