@@ -5,8 +5,6 @@ var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{
 });
 var basemap = OpenStreetMap_Mapnik.addTo(map);
 
-
-//add the national precipitation radar layer
 var radarUrl = 'https://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi';
 var radarDisplayOptions = {
   layers: 'nexrad-n0r-900913',
@@ -15,10 +13,8 @@ var radarDisplayOptions = {
 };
 var radar = L.tileLayer.wms(radarUrl, radarDisplayOptions).addTo(map);
 
-//add alerts layer
 var weatherAlertsUrl = 'https://api.weather.gov/alerts/active?region_type=land';
 $.getJSON(weatherAlertsUrl, function(data) {
-    //L.geoJSON(data).addTo(map);
     L.geoJSON(data, {
         style: function(feature){
             var alertColor = 'orange';

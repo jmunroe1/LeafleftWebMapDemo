@@ -24,7 +24,7 @@ function quakeColor(mag) {
             return colors[threshold];
         }
     }
-    return '#00ff00'; // default green
+    return '#00ff00';
 }
 
 function quakeSize(mag) {

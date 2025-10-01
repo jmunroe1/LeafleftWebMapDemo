@@ -1,4 +1,3 @@
-// earthquake map initialization
 var quakeMap = L.map('earthquakemap').setView([20, 0], 2);
 
 var mapTiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
