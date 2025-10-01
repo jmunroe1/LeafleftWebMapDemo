@@ -3,13 +3,12 @@
 
 This repository contains interactive web maps built with Leaflet.js demonstrating real-time geospatial data visualization.
 
-## 🌟 Combined Weather & Earthquake Map (Bonus)
+## Combined Weather & Earthquake Map
 An advanced interactive map that combines both weather alerts and earthquake data with toggle controls:  
-- **Layer Toggle System**: Switch between weather alerts, earthquake data, and precipitation radar  
+- **Toggle Control Switch**: Switch between weather alerts, earthquake data, and precipitation radar  
 - **Real-time Weather Alerts**: Color-coded severity levels with detailed popups  
 - **Live Earthquake Data**: Magnitude-based markers with comprehensive information  
 - **Precipitation Radar**: Real-time weather radar overlay  
-- **Dynamic Legends**: Context-sensitive legends that show/hide with layer toggles  
 - **Status Indicators**: Real-time loading status for each data layer  
 
 **Combined Map:** <https://jmunroe1.github.io/LeafleftWebMapDemo/combined/>
@@ -46,9 +45,9 @@ A real-time earthquake monitoring map displaying:
 **Earthquake Map:** <https://jmunroe1.github.io/LeafleftWebMapDemo/earthquake/>
 
 ## Technologies Used
-- **Leaflet.js** - Interactive mapping library
-- **jQuery** - Data fetching and DOM manipulation
-- **USGS Earthquake API** - Real-time earthquake data
-- **National Weather Service API** - Weather alerts and radar data
-- **OpenStreetMap** - Base map tiles
-- **Layer Groups** - Advanced layer management and toggle controls
+- **Leaflet.js**
+- **jQuery**
+- **USGS Earthquake API**
+- **National Weather Service API**
+- **OpenStreetMap**
+- **Layer Groups**
